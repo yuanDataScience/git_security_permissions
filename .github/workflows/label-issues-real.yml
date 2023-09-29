@@ -6,7 +6,7 @@ on:
 # can add permissions here at workflow level
 jobs:
   assign-label:
-    permissions:
+    permissions: # permissions decide the scope of GITHUB_TOKEN generated
       issues: write # write-all means to write to all fields
     runs-on: ubuntu-latest
     steps:
