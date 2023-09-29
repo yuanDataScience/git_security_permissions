@@ -3,8 +3,11 @@ on:
   issues:
     types:
       - opened
+# can add permissions here at workflow level
 jobs:
   assign-label:
+    permissions:
+      issues: write # write-all means to write to all fields
     runs-on: ubuntu-latest
     steps:
       - name: Assign label
